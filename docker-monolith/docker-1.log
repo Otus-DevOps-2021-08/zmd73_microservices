@@ -1,0 +1,8 @@
+vlad@puppet-agent:~$ docker images
+REPOSITORY              TAG       IMAGE ID       CREATED         SIZE
+zmd73/ubuntu-tmp-file   latest    62d434015272   8 seconds ago   63.1MB
+ubuntu                  18.04     886eca19e611   6 days ago      63.1MB
+nginx                   latest    605c77e624dd   2 weeks ago     141MB
+hello-world             latest    feb5d9fea6a5   3 months ago    13.3kB
+
+Образ содержит в себе информацию о себе и шаблоны, контейнер содержит данные о состоянии, заполненый шаблон конфигурации и информацию о новых слоях

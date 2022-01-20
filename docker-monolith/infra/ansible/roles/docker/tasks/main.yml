@@ -1,0 +1,16 @@
+---
+# tasks file for docker
+- name: Wait for automatic system updates
+  shell: while sudo fuser /var/lib/dpkg/{{ item }} >/dev/null 2>&1; do sleep 1; done;
+  with_items:
+    - lock
+    - lock-frontend
+  tags: install
+
+---
+- name: Show info about the env this host belong to
+  debug:
+    msg: "This host is in {{ env }} environment!!!"
+
+- include: docker.yml
+- include: reddit.yml
